@@ -1,1 +1,1 @@
-# StreamElements-Chat-Event
+# StreamElements - Chat Event
