@@ -1,0 +1,278 @@
+/* This is the start of the user message appearance */
+div.display-row div.user {
+  	display: block;
+    padding: 5px;
+    vertical-align: middle;
+}
+    div.user div.user-name {
+        display: block;
+      	margin-bottom: 5px;
+    }
+		div.user div.user-name span {
+          	margin: 0 5px;
+		}
+    div.user div.user-message {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 12px;
+        background: rgba(26, 25, 26, 0.5);
+        max-width: {{displayMaxWidth}}%;
+        font-size: 0.85em;
+        line-height: 1em;
+        min-height: 1.25em;
+        text-align: left;
+        vertical-align: top;
+        text-transform: lowercase;
+        word-break: break-word;
+		overflow-wrap: break-word;
+		hyphens: auto;
+    }
+    div.user::after {
+        content: "";
+        background-size: 48px 48px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        opacity: {{opacityOption}};
+    }
+
+/* Start of user role message properties */
+div.user.viewer {
+  	text-align: {{textAlign}};
+}
+	div.user.viewer::after {
+      	/*background-image: url("{{textImageBg}}");
+      	background-position: {{textAlign}} 18px;*/
+    }
+	div.user.viewer div.user-name img.avatar {
+      	float: {{textAlign}};
+	}
+
+div.user.subscriber {
+  	text-align: {{subAlign}};
+}
+	div.user.subscriber::after {
+      	background-image: url("{{subImageBg}}");
+      	background-position: {{subAlign}} 18px;
+	}
+	div.user.subscriber div.user-name img.avatar {
+      	float: {{subAlign}};
+	}
+	div.user.subscriber div.user-name span {
+      	color: {{subTextColor}} {{twitchUserColors}};
+	}
+
+div.user.artist {
+  	text-align: {{artAlign}};
+}
+	div.user.artist::after {
+      	background-image: url("{{artImageBg}}");
+      	background-position: {{artAlign}} 18px;
+	}
+	div.user.artist div.user-name img.avatar {
+      	float: {{artAlign}};
+	}
+	div.user.artist div.user-name span {
+      	color: {{artTextColor}} {{twitchUserColors}};
+	}
+
+div.user.vip {
+  	text-align: {{vipAlign}};
+}
+	div.user.vip::after {
+      	background-image: url("{{vipImageBg}}");
+      	background-position: {{vipAlign}} 18px;
+	}
+	div.user.vip div.user-name img.avatar {
+      	float: {{vipAlign}};
+	}
+	div.user.vip div.user-name span {
+      	color: {{vipTextColor}} {{twitchUserColors}};
+	}
+
+div.user.mod {
+  	text-align: {{modAlign}};
+}
+	div.user.mod::after {
+      	background-image: url("{{modImageBg}}");
+      	background-position: {{modAlign}} 18px;
+	}
+	div.user.mod div.user-name img.avatar {
+      	float: {{modAlign}};
+	}
+	div.user.mod div.user-name span {
+      	color: {{modTextColor}} {{twitchUserColors}};
+	}
+
+div.user.streamer {
+  	text-align: {{boardAlign}};
+}
+	div.user.streamer::after {
+      	background-image: url("{{boardImageBg}}");
+      	background-position: {{boardAlign}} 18px;      	
+	}
+	div.user.streamer div.user-name img.avatar {
+      	float: {{boardAlign}};
+	}
+	div.user.streamer div.user-name span {
+      	color: {{boardTextColor}} {{twitchUserColors}};
+	}
+
+/* Start of alert feed properties */
+div.display-row div.feed {
+  	display: block;
+  	margin: 0 auto;
+  	padding: 5px 20px;
+  	vertical-align: middle;
+}
+
+div.follower-name, 
+div.raid-name, 
+div.subscribed-name, div.resubs-name,  
+div.giftSub-name, div.bulkGift-name, 
+div.cheer-name, 
+div.tip-name
+{
+  	margin-top: 1px;
+  	font-size: 0.8em;
+  	filter: brightness(250%);
+}
+
+div.follower-block, 
+div.raid-block, 
+div.subscribed-block, div.resubs-block, 
+div.giftSub-block, div.bulkGift-block, 
+div.cheer-block, 
+div.tip-block 
+{
+  	border-radius: 12px;
+  	padding: 15px 50px 17px;
+  	display: inline-block;
+    text-align: center;
+  	min-height: 10%;
+  	max-width: {{displayMaxWidth}}%;
+  	background-repeat: no-repeat;
+  	background-size: {{feedBgResize}}% auto;
+}
+
+div.follower-text,
+div.raid-text,
+div.subscribed-text, div.resubs-text, 
+div.giftSub-text, div.bulkGift-text, 
+div.cheer-text, 
+div.tip-text
+{
+  	font-size: 0.9em;
+}
+
+div.raid-message, 
+div.subscribed-message, div.resubs-message, 
+div.cheer-message, 
+div.tip-message 
+{
+  	margin-top: 1px;
+  	font-size: 0.7em;
+  	filter: brightness(200%);
+}
+
+/* follwer properties */
+div.feed.follower {
+  	text-align: {{feedFollowerAlign}};
+}
+	div.feed.follower div.follower-block {
+		background-color: {{feedFollowBgColor}};
+        background-image: url("{{feedFollowerImg}}");
+      	background-position: {{feedFollowerImgPos}};
+	}
+    div.feed.follower div.follower-block div.follower-text {
+      	color: {{feedFollowColor}};
+    }
+	div.feed.follower div.follower-block div.follower-name {
+      	color: {{feedFollowBgColor}};
+	}
+
+/* raid properties */
+div.feed.raid {
+  	text-align: {{feedRaidAlign}};
+}
+	div.feed.raid div.raid-block {
+		background-color: {{feedRaidBgColor}};
+        background-image: url("{{feedRaidImg}}");
+      	background-position: {{feedRaidImgPos}};
+	}
+    div.feed.raid div.raid-block div.raid-text
+	{
+      	color: {{feedRaidColor}};
+    }
+	div.feed.raid div.raid-block div.raid-name, 
+	div.feed.raid div.raid-block div.raid-message {
+      	color: {{feedRaidBgColor}};
+	}
+
+/* cheers/bits properties */
+div.feed.cheer {
+  	text-align: {{feedCheersAlign}};
+}
+	div.feed.cheer div.cheer-block {
+		background-color: {{feedCheersBgColor}};
+        background-image: url("{{feedCheersImg}}");
+      	background-position: {{feedCheersImgPos}};
+	}
+	div.feed.cheer div.cheer-block div.cheer-text {
+      	color: {{feedCheersColor}};
+    }
+	div.feed.cheer div.cheer-block div.cheer-name,
+	div.feed.cheer div.cheer-block div.cheer-message {
+      	color: {{feedCheersBgColor}};
+	}
+
+/* subscribers properties */
+div.feed.subscribed, div.feed.resubs, 
+div.feed.giftSub, div.feed.bulkGift 
+{
+  	text-align: {{feedSubsAlign}};
+}
+	div.feed.subscribed div.subscribed-block, div.feed.resubs div.resubs-block, 
+	div.feed.giftSub div.giftSub-block, div.feed.bulkGift div.bulkGift-block 
+	{
+      	background-color: {{feedSubsBgColor}};
+	}
+        div.feed.subscribed div.subscribed-block, div.feed.resubs div.resubs-block {
+            background-image: url("{{feedSubsImg}}");
+            background-position: {{feedSubsImgPos}};
+        } 
+        div.feed.giftSub div.giftSub-block, div.feed.bulkGift div.bulkGift-block {
+            background-image: url("{{feedSubsGiftImg}}");
+            background-position: {{feedSubsGiftImgPos}};
+        } 
+    div.feed.subscribed div.subscribed-block div.subscribed-text, div.feed.resubs div.resubs-block div.resubs-text, 
+	div.feed.giftSub div.giftSub-block div.giftSub-text, div.feed.bulkGift div.bulkGift-block div.bulkGift-text
+	{
+      	color: {{feedSubsColor}};
+    }
+	div.feed.subscribed div.subscribed-block div.subscribed-name, div.feed.resubs div.resubs-block div.resubs-name, 
+	div.feed.giftSub div.giftSub-block div.giftSub-name, div.feed.bulkGift div.bulkGift-block div.bulkGift-name,
+	div.feed.subscribed div.subscribed-block div.subscribed-message, div.feed.resubs div.resubs-block div.resubs-message {
+      	color: {{feedSubsBgColor}};
+	}
+
+/* tips/donation properties */
+div.feed.tip {
+  	text-align: {{feedTipAlign}};
+}
+	div.feed.tip div.tip-block {
+		background-color: {{feedTipBgColor}};
+        background-image: url("{{feedCheersImg}}");
+      	background-position: {{feedTipImgPos}};
+	}
+	div.feed.tip div.tip-block div.tip-text {
+      	color: {{feedTipColor}};
+    }
+	div.feed.tip div.tip-block div.tip-name,
+	div.feed.tip div.tip-block div.tip-message {
+      	color: {{feedTipBgColor}};
+	}
