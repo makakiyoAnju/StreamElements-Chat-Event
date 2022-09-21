@@ -16,7 +16,7 @@ div.display-row div.user {
         padding: 10px 15px;
         border-radius: 12px;
         background: rgba(26, 25, 26, 0.5);
-        max-width: {displayMaxWidth}%;
+        max-width: {{displayMaxWidth}}%;
         font-size: 0.85em;
         line-height: 1em;
         min-height: 1.25em;
@@ -37,89 +37,89 @@ div.display-row div.user {
         left: 0;
         right: 0;
         z-index: -1;
-        opacity: {opacityOption};
+        opacity: {{opacityOption}};
     }
 
 /* Start of user role message properties */
 div.user.viewer {
-  	text-align: {textAlign};
+  	text-align: {{textAlign}};
 }
 	div.user.viewer::after {
       	/*background-image: url("{{textImageBg}}");
       	background-position: {{textAlign}} 18px;*/
     }
 	div.user.viewer div.user-name img.avatar {
-      	float: {textAlign};
+      	float: {{textAlign}};
 	}
 
 div.user.subscriber {
-  	text-align: {subAlign};
+  	text-align: {{subAlign}};
 }
 	div.user.subscriber::after {
-      	background-image: url("{subImageBg}");
-      	background-position: {subAlign} 18px;
+      	background-image: url("{{subImageBg}}");
+      	background-position: {{subAlign}} 18px;
 	}
 	div.user.subscriber div.user-name img.avatar {
-      	float: {subAlign};
+      	float: {{subAlign}};
 	}
 	div.user.subscriber div.user-name span {
-      	color: {subTextColor} {twitchUserColors};
+      	color: {{subTextColor}} {{twitchUserColors}};
 	}
 
 div.user.artist {
-  	text-align: {artAlign};
+  	text-align: {{artAlign}};
 }
 	div.user.artist::after {
-      	background-image: url("{artImageBg}");
-      	background-position: {artAlign} 18px;
+      	background-image: url("{{artImageBg}}");
+      	background-position: {{artAlign}} 18px;
 	}
 	div.user.artist div.user-name img.avatar {
-      	float: {artAlign};
+      	float: {{artAlign}};
 	}
 	div.user.artist div.user-name span {
-      	color: {artTextColor} {twitchUserColors};
+      	color: {{artTextColor}} {{twitchUserColors}};
 	}
 
 div.user.vip {
-  	text-align: {vipAlign};
+  	text-align: {{vipAlign}};
 }
 	div.user.vip::after {
-      	background-image: url("{vipImageBg}");
-      	background-position: {vipAlign} 18px;
+      	background-image: url("{{vipImageBg}}");
+      	background-position: {{vipAlign}} 18px;
 	}
 	div.user.vip div.user-name img.avatar {
-      	float: {vipAlign};
+      	float: {{vipAlign}};
 	}
 	div.user.vip div.user-name span {
-      	color: {vipTextColor} {twitchUserColors};
+      	color: {{vipTextColor}} {{twitchUserColors}};
 	}
 
 div.user.mod {
-  	text-align: {modAlign};
+  	text-align: {{modAlign}};
 }
 	div.user.mod::after {
-      	background-image: url("{modImageBg}");
-      	background-position: {modAlign} 18px;
+      	background-image: url("{{modImageBg}}");
+      	background-position: {{modAlign}} 18px;
 	}
 	div.user.mod div.user-name img.avatar {
-      	float: {modAlign};
+      	float: {{modAlign}};
 	}
 	div.user.mod div.user-name span {
-      	color: {modTextColor} {twitchUserColors};
+      	color: {{modTextColor}} {{twitchUserColors}};
 	}
 
 div.user.streamer {
-  	text-align: {boardAlign};
+  	text-align: {{boardAlign}};
 }
 	div.user.streamer::after {
-      	background-image: url("{boardImageBg}");
-      	background-position: {boardAlign} 18px;      	
+      	background-image: url("{{boardImageBg}}");
+      	background-position: {{boardAlign}} 18px;      	
 	}
 	div.user.streamer div.user-name img.avatar {
-      	float: {boardAlign};
+      	float: {{boardAlign}};
 	}
 	div.user.streamer div.user-name span {
-      	color: {boardTextColor} {twitchUserColors};
+      	color: {{boardTextColor}} {{twitchUserColors}};
 	}
 
 /* Start of alert feed properties */
@@ -154,9 +154,9 @@ div.tip-block
   	display: inline-block;
     text-align: center;
   	min-height: 10%;
-  	max-width: {displayMaxWidth}%;
+  	max-width: {{displayMaxWidth}}%;
   	background-repeat: no-repeat;
-  	background-size: {feedBgResize}% auto;
+  	background-size: {{feedBgResize}}% auto;
 }
 
 div.follower-text,
@@ -181,98 +181,98 @@ div.tip-message
 
 /* follwer properties */
 div.feed.follower {
-  	text-align: {feedFollowerAlign};
+  	text-align: {{feedFollowerAlign}};
 }
 	div.feed.follower div.follower-block {
-		background-color: {feedFollowBgColor};
-        background-image: url("{feedFollowerImg}");
-      	background-position: {feedFollowerImgPos};
+		background-color: {{feedFollowBgColor}};
+        background-image: url("{{feedFollowerImg}}");
+      	background-position: {{feedFollowerImgPos}};
 	}
     div.feed.follower div.follower-block div.follower-text {
-      	color: {feedFollowColor};
+      	color: {{feedFollowColor}};
     }
 	div.feed.follower div.follower-block div.follower-name {
-      	color: {feedFollowBgColor};
+      	color: {{feedFollowBgColor}};
 	}
 
 /* raid properties */
 div.feed.raid {
-  	text-align: {feedRaidAlign};
+  	text-align: {{feedRaidAlign}};
 }
 	div.feed.raid div.raid-block {
-		background-color: {feedRaidBgColor};
-        background-image: url("{feedRaidImg}");
-      	background-position: {feedRaidImgPos};
+		background-color: {{feedRaidBgColor}};
+        background-image: url("{{feedRaidImg}}");
+      	background-position: {{feedRaidImgPos}};
 	}
     div.feed.raid div.raid-block div.raid-text
 	{
-      	color: {feedRaidColor};
+      	color: {{feedRaidColor}};
     }
 	div.feed.raid div.raid-block div.raid-name, 
 	div.feed.raid div.raid-block div.raid-message {
-      	color: {feedRaidBgColor};
+      	color: {{feedRaidBgColor}};
 	}
 
 /* cheers/bits properties */
 div.feed.cheer {
-  	text-align: {feedCheersAlign};
+  	text-align: {{feedCheersAlign}};
 }
 	div.feed.cheer div.cheer-block {
-		background-color: {feedCheersBgColor};
-        background-image: url("{feedCheersImg}");
-      	background-position: {feedCheersImgPos};
+		background-color: {{feedCheersBgColor}};
+        background-image: url("{{feedCheersImg}}");
+      	background-position: {{feedCheersImgPos}};
 	}
 	div.feed.cheer div.cheer-block div.cheer-text {
-      	color: {feedCheersColor};
+      	color: {{feedCheersColor}};
     }
 	div.feed.cheer div.cheer-block div.cheer-name,
 	div.feed.cheer div.cheer-block div.cheer-message {
-      	color: {feedCheersBgColor};
+      	color: {{feedCheersBgColor}};
 	}
 
 /* subscribers properties */
 div.feed.subscribed, div.feed.resubs, 
 div.feed.giftSub, div.feed.bulkGift 
 {
-  	text-align: {feedSubsAlign};
+  	text-align: {{feedSubsAlign}};
 }
 	div.feed.subscribed div.subscribed-block, div.feed.resubs div.resubs-block, 
 	div.feed.giftSub div.giftSub-block, div.feed.bulkGift div.bulkGift-block 
 	{
-      	background-color: {feedSubsBgColor};
+      	background-color: {{feedSubsBgColor}};
 	}
         div.feed.subscribed div.subscribed-block, div.feed.resubs div.resubs-block {
-            background-image: url("{feedSubsImg}");
-            background-position: {feedSubsImgPos};
+            background-image: url("{{feedSubsImg}}");
+            background-position: {{feedSubsImgPos}};
         } 
         div.feed.giftSub div.giftSub-block, div.feed.bulkGift div.bulkGift-block {
-            background-image: url("{feedSubsGiftImg}");
-            background-position: {feedSubsGiftImgPos};
+            background-image: url("{{feedSubsGiftImg}}");
+            background-position: {{feedSubsGiftImgPos}};
         } 
     div.feed.subscribed div.subscribed-block div.subscribed-text, div.feed.resubs div.resubs-block div.resubs-text, 
 	div.feed.giftSub div.giftSub-block div.giftSub-text, div.feed.bulkGift div.bulkGift-block div.bulkGift-text
 	{
-      	color: {feedSubsColor};
+      	color: {{feedSubsColor}};
     }
 	div.feed.subscribed div.subscribed-block div.subscribed-name, div.feed.resubs div.resubs-block div.resubs-name, 
 	div.feed.giftSub div.giftSub-block div.giftSub-name, div.feed.bulkGift div.bulkGift-block div.bulkGift-name,
 	div.feed.subscribed div.subscribed-block div.subscribed-message, div.feed.resubs div.resubs-block div.resubs-message {
-      	color: {feedSubsBgColor};
+      	color: {{feedSubsBgColor}};
 	}
 
 /* tips/donation properties */
 div.feed.tip {
-  	text-align: {feedTipAlign};
+  	text-align: {{feedTipAlign}};
 }
 	div.feed.tip div.tip-block {
-		background-color: {feedTipBgColor};
-        background-image: url("{feedCheersImg}");
-      	background-position: {feedTipImgPos};
+		background-color: {{feedTipBgColor}};
+        background-image: url("{{feedCheersImg}}");
+      	background-position: {{feedTipImgPos}};
 	}
 	div.feed.tip div.tip-block div.tip-text {
-      	color: {feedTipColor};
+      	color: {{feedTipColor}};
     }
 	div.feed.tip div.tip-block div.tip-name,
 	div.feed.tip div.tip-block div.tip-message {
-      	color: {feedTipBgColor};
+      	color: {{feedTipBgColor}};
 	}
